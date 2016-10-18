@@ -6,7 +6,10 @@
 | 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401，406,200|
 | 商品列表      | http://api.junashare.com/juna/product.json | page:页码 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,200|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
-
+| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
+| 盒子列表      | http://api.junashare.com/juna/boxlist.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,,200|
+| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
+| 广告      | http://api.junashare.com/juna/banner.json |无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 
 
@@ -14,5 +17,5 @@
 |----------|---|
 |200|成功|
 |401|token错误<br/>缺少参数xxx<br/>错误的验证码<br/>用户名或密码错误|
-|403|用户名 XXX 尚未激活或已被屏蔽。|
-|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在|
+|403|用户名 XXX 尚未激活或已被屏蔽。|用户未登录
+|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在|商品id都不能为空|商品限时结束|盒子已满，请先从盒子中删除部分商品|此商品已加入盒子，不能重复加入|商品已下架|商品已售罄|

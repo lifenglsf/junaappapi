@@ -5,6 +5,7 @@
 | 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
 | 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401，406,200|
 | 商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,200|
+| 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
 | 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 盒子列表      | http://api.junashare.com/juna/boxlist.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,,200|

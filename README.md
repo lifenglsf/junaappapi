@@ -27,7 +27,7 @@
 |nid|商品id|
 |type|product：一购商品，share_product：享什么商品|
 |body.und.0.value|商品描述|
-|field.und.0.value|商品购买价格|
-|field_origin_price.und.0.value|商品原价、商品市场价|
+|field_price.und.0.value|一购价格|
+|field_origin_price.und.0.value|享什么价格，市场价|
 |field_total_num.und.0.value|商品总数|
 |field_pictures.und.0.value.uri|图片路径，可以有多个图片，第二个图片地址field_pictures.und.1.value.uri|

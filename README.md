@@ -7,9 +7,9 @@
 | 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,200|
 | 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
-| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
-| 盒子列表      | http://api.junashare.com/juna/boxlist.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,,200|
-| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
+| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|无|403,406,200|
+| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token |post|无|403,,200|
+| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|无|403,406,200|
 | 广告      | http://api.junashare.com/juna/banner.json |无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 

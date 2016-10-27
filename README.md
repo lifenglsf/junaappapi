@@ -7,10 +7,10 @@
 | 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,200|
 | 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
-| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|无|403,406,200|
-| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token |post|无|403,,200|
-| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|无|403,406,200|
-| 广告      | http://api.junashare.com/juna/banner.json |无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
+| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
+| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
+| 广告      | http://api.junashare.com/juna/banner.json ||post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 
 
@@ -30,4 +30,5 @@
 |field_price.und.0.value|一购价格|
 |field_origin_price.und.0.value|享什么价格，市场价|
 |field_total_num.und.0.value|商品总数|
-|field_pictures.und.0.value.uri|图片路径，可以有多个图片，第二个图片地址field_pictures.und.1.value.uri|
+|field_pictures.und.0.uri|图片原图路径，可以有多个图片，第二个图片地址field_pictures.und.1.uri|
+|field_pictures.und.0.thumb|缩略图，可以有多个图片，第二个图片地址field_pictures.und.1.thumb|

@@ -32,3 +32,13 @@
 |field_total_num.und.0.value|商品总数|
 |field_pictures.und.0.uri|图片原图路径，可以有多个图片，第二个图片地址field_pictures.und.1.uri|
 |field_pictures.und.0.thumb|缩略图，可以有多个图片，第二个图片地址field_pictures.und.1.thumb|
+|field_inbox_num.und.0.value|加入盒子数量|
+
+|我的盒子字段|我的盒子字段描述|
+|---|---|
+|nid|商品id|
+|product_type|商品类型  product：一购商品，share_product：享什么商品|
+|inbox_num|加入盒子数量|
+|remain_num|剩余数量|
+|field.und.0.thumb|商品缩略图|
+|remain_boxproduct_num|还可放入盒子的商品数量|

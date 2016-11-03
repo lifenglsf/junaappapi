@@ -34,6 +34,7 @@
 |field_pictures.und.0.thumb|缩略图，可以有多个图片，第二个图片地址field_pictures.und.1.thumb|
 |field_inbox_num.und.0.value|加入盒子数量|
 |field_image_for_list.und.0.uri|列表页图片|
+|field_description.und.0.value|商品描述|
 
 |我的盒子字段|我的盒子字段描述|
 |---|---|

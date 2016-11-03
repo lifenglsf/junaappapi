@@ -11,6 +11,7 @@
 | 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
 | 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 | 广告      | http://api.junashare.com/juna/banner.json ||post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 移除盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 
 
 
@@ -19,7 +20,7 @@
 |200|成功|
 |401|token错误<br/>缺少参数xxx<br/>错误的验证码<br/>用户名或密码错误|
 |403|用户名 XXX 尚未激活或已被屏蔽。|用户未登录
-|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买|
+|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买<br/>你未收藏此商品|
 
 |商品字段|商品字段描述|
 |------|-----|

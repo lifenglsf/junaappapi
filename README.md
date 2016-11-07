@@ -1,17 +1,17 @@
 | 接口名称        | 接口地址           | 接口参数  |接口方式|header|status code|
 | ------------- |-------------| -----|----|----|-----|
-| 用户注册      | http://api.junashare.com/juna/user/register.json | name:手机号，pass：密码，code：手机验证码 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
-| 用户登录      |http://api.junashare.com/juna/user/login.json      |name:手机号，pass:密码 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,403,406,200|
-| 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
+| 用户注册      | http://api.junashare.com/juna/user/register.json | name:手机号必填，pass：密码必填，code：手机验证码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
+| 用户登录      |http://api.junashare.com/juna/user/login.json      |name:手机号必填，pass:密码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,403,406,200|
+| 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号必填|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
 | 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401，406,200|
-| 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,200|
-| 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码 ,time：到限时结束的秒数|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：时间段，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|
+| 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码必填,time：时间段非必填，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406，200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
-| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
-| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
-| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
-| 广告      | http://api.junashare.com/juna/banner.json ||post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
-| 移除盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id ,services_token:XXX，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
+| 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id必填 services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
+| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
+| 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
+| 广告      | http://api.junashare.com/juna/banner.json |type:banner类型必填，1为商品，2为url|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200|
+| 移出盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 
 
 
@@ -20,7 +20,7 @@
 |200|成功|
 |401|token错误<br/>缺少参数xxx<br/>错误的验证码<br/>用户名或密码错误|
 |403|用户名 XXX 尚未激活或已被屏蔽。|用户未登录
-|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买<br/>你未收藏此商品|
+|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买<br/>你未收藏此商品<br/>商品时间段错误<br/>banner类型错误|
 
 |商品字段|商品字段描述|
 |------|-----|

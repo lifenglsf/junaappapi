@@ -12,7 +12,7 @@
 | 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 | 广告      | http://api.junashare.com/juna/banner.json |btype:banner类型必填，1为享什么的banner，2为易购的banner|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200|
 | 移出盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
-| 用户信息认证      | http://api.junashare.com/juna/user_interface/user_cert.json | username：姓名必填 ,companyname:公司名称必填，companyaddress:公司地址必填，cert:图片file的名字必填，certtype:认证类型必填，有效值为1名片，2工牌，3在职证明，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,500,200|
+| 用户信息认证      | http://api.junashare.com/juna/user_interface/user_cert.json | username：姓名必填 ,companyname:公司名称必填，companyaddress:公司地址必填，cert:图片file的名字必填，certtype:认证类型必填，有效值为1名片，2工牌，3在职证明，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值,Content-Type:multipart/form-data|403,406,500,200|
 
 
 

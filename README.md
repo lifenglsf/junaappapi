@@ -3,12 +3,12 @@
 | 用户注册      | http://api.junashare.com/juna/user/register.json | name:手机号必填，pass：密码必填，code：手机验证码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
 | 用户登录      |http://api.junashare.com/juna/user/login.json      |name:手机号必填，pass:密码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,403,406,200|
 | 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号必填|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
-| 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401，406,200|
+| 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token，cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|401，406,200|
 | 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：时间段，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|
 | 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码必填,time：时间段非必填，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406，200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|
 | 商品详情      | http://api.junashare.com/juna/product/商品id/detail.json | 无 |get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中product为商品信息，seller为商家信息|
 | 加入盒子      | http://api.junashare.com/juna/product/addtobox.json | nid：商品id必填 services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
-| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
+| 盒子列表      | http://api.junashare.com/juna/boxlist.json | services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,,200|
 | 购买商品      | http://api.junashare.com/juna/product/buy.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 | 广告      | http://api.junashare.com/juna/banner.json |btype:banner类型必填，1为享什么的banner，2为易购的banner|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200|
 | 移出盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
@@ -39,6 +39,7 @@
 |field_image_for_list.und.0.uri|列表页图片|
 |field_description.und.0.value|商品描述|
 |field_image_for_box.und.0.uri|一购商品盒子列表图片|
+|isinbox|是否在盒子中1代表已经在盒子中|
 
 |我的盒子字段|我的盒子字段描述|
 |---|---|

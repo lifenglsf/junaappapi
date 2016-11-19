@@ -13,8 +13,8 @@
 | 广告      | http://api.junashare.com/juna/banner.json |btype:banner类型必填，1为享什么的banner，2为易购的banner|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200|
 | 移出盒子商品      | http://api.junashare.com/juna/product/removefrombox.json | nid：商品id必填 ,services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|403,406,200|
 | 用户信息认证      | http://api.junashare.com/juna/user_interface/user_cert.json | username：姓名必填 ,companyname:公司名称必填，companyaddress:公司地址必填，cert:图片file的名字必填，certtype:认证类型必填，有效值为1名片，2工牌，3在职证明，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值,Content-Type:multipart/form-data|403,406,500,200|
-| app需要的支付      | http://api.junashare.com/juna/orders/pre_pay.json | orderid必填:订单id ,payment_type必填:支付类型，1为支付宝，2为微信认，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值,Content-Type:multipart/form-data|406,500,200|
-
+| app需要的支付数据      | http://api.junashare.com/juna/orders/pre_pay.json | orderid必填:订单id ,payment_type必填:支付类型，1为支付宝，2为微信认，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值,Content-Type:multipart/form-data|406,500,200|
+| 校验app支付是否成功      | http://api.junashare.com/juna/orders/app_payment_callback.json | orderid必填:订单id ,payment_type必填:支付类型，1为支付宝，2为微信认，services_token:XXX必填，token的值来自于 http://api.junashare.com/services/session/token|post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值,Content-Type:application/json|406,200|
 
 
 |http 状态码|信息|
@@ -22,7 +22,7 @@
 |200|成功|
 |401|token错误<br/>缺少参数xxx<br/>错误的验证码<br/>用户名或密码错误|
 |403|用户名 XXX 尚未激活或已被屏蔽。|用户未登录
-|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买<br/>你未收藏此商品<br/>商品时间段错误<br/>banner类型错误<br/>只能上传图片<br/>认证图片不能为空|
+|406|用户未登录<br/>已作为XXX登录<br/>验证码已失效<br/>手机号码错误<br/>手机验证码已使用，请重新获取<br/>手机验证码不能为空<br/>错误的验证码<br/>不支持的商品类型<br/>商品未发布<br/>商品不存在<br/>商品id都不能为空<br/>商品限时结束<br/>盒子已满，请先从盒子中删除部分商品<br/>此商品已加入盒子，不能重复加入<br/>商品已下架<br/>商品已售罄<br/>商品今天已购买<br/>你未收藏此商品<br/>商品时间段错误<br/>banner类型错误<br/>只能上传图片<br/>认证图片不能为空<br/>支付数据异常<br/>订单id错误|
 |500|未知错误|
 
 |商品字段|商品字段描述|

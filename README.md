@@ -52,8 +52,11 @@
 |product_type|商品类型  product：一购商品，share_product：享什么商品|
 |inbox_num|加入盒子数量|
 |remain_num|剩余数量|
-|field.und.0.thumb|商品缩略图|
+|field_image_for_box.und.0.uri|一购商品盒子图片|
+|field_image_for_list.und.0.uri|享什么商品盒子图片|
 |remain_boxproduct_num|还可放入盒子的商品数量|
+|types|商品类型|
+|field_price.und.0.value|商品价格|
 
 |订单字段|订单字段描述|
 |---|---|

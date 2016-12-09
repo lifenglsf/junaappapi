@@ -2,7 +2,7 @@
 | ------------- |-------------| -----|----|----|-----|
 | 用户注册      | http://api.junashare.com/juna/user/register.json | name:手机号必填，pass：密码必填，code：手机验证码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
 | 用户登录      |http://api.junashare.com/juna/user/login.json      |name:手机号必填，pass:密码必填 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,403,406,200|
-| 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号必填|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
+| 创建手机验证码 | http://api.junashare.com/juna/user_interface/add_mobilecode.json |name：手机号必填,type：类型非必填，有register和forgot_password两种|post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|401,406,200|
 | 用户登出      | http://api.junashare.com/juna/user/logout.json | 无 |post|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token，cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值|401，406,200|
 | 易购商品列表      | http://api.junashare.com/juna/product.json | page:页码 ,time：时间段，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406,200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|
 | 享什么商品列表      | http://api.junashare.com/juna/share_product.json | page:页码必填,time：时间段非必填，有效值为0,1,2,3,4|get|X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|406，200，返回数据中data为产品信息，timeperiod为时间段信息，selected为1为选中的时间段|

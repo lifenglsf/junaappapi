@@ -58,7 +58,7 @@
 |field_image_for_box.und.0.uri|一购商品盒子图片|
 |field_image_for_list.und.0.uri|享什么商品盒子图片|
 |remain_boxproduct_num|还可放入盒子的商品数量|
-|types|商品类型|
+|types|商品类型,如白领商品|
 |field_price.und.0.value|商品价格|
 
 |订单字段|订单字段描述|

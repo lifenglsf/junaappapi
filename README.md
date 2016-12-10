@@ -60,6 +60,7 @@
 |remain_boxproduct_num|还可放入盒子的商品数量|
 |types|商品类型,如白领商品|
 |field_price.und.0.value|商品价格|
+|created|加入盒子时间|
 
 |订单字段|订单字段描述|
 |---|---|

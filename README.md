@@ -75,3 +75,11 @@
 |status|订单状态|
 |express_id|物流编号|
 |payment_type|付款方式|
+
+|我的摇享字段|我的摇享字段描述|
+|---|---|
+|status|状态，0为未中奖，1为已中奖，2为未开奖|
+|swingnum|摇享号|
+|pdate|摇享期号|
+|pictures|摇享商品图片|
+

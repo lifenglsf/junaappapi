@@ -22,7 +22,7 @@
 | 我的摇享    | http://api.junashare.com/juna/myswingshare.json | page页码，非必填 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 我的白领券    | http://api.junashare.com/juna/mycoupon.json | page页码非必填 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 摇享中奖列表    | http://api.junashare.com/juna/prizelist.json | pdate摇享期号，非必填。格式2016-2-3 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
-
+| 摇享商品详情    | http://api.junashare.com/juna/swingsharedetail.json | 无 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 |http 状态码|信息|
 |----------|---|
@@ -83,4 +83,15 @@
 |swingnum|摇享号|
 |pdate|摇享期号|
 |pictures|摇享商品图片|
+
+|摇享商品详情字段|摇享商品详情字段描述|
+|---|---|
+|data.title|商品名称|
+|data.body.und.0.value|商品详情|
+|data.field_total_num.und.0.value|商品数量|
+|data.field_price.und.0.value|商品价值|
+|data.field_brandinfo.und.0.value|品牌介绍，为外部链接|
+|data.participatenum|参与人数|
+|data.field_pictures.und.0.uri|商品图片地址|
+|remaintime|到结束时间剩余秒数，-1为未开始，-2为已结束|
 

@@ -23,7 +23,7 @@
 | 我的白领券    | http://api.junashare.com/juna/mycoupon.json |type类型，为1，2，3非必填, page页码非必填 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 摇享中奖列表    | http://api.junashare.com/juna/prizelist.json | pdate摇享期号，非必填。格式2016-2-3 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 摇享商品详情    | http://api.junashare.com/juna/swingsharedetail.json | 无 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
-| 忘记密码    | http://api.junashare.com/junausers/forgot_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 忘记密码    | http://api.junashare.com/juna/junausers/forgot_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 |http 状态码|信息|
 |----------|---|

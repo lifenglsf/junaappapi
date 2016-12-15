@@ -49,6 +49,7 @@
 |field_description.und.0.value|商品描述|
 |field_image_for_box.und.0.uri|一购商品盒子列表图片|
 |isinbox|是否在盒子中1代表已经在盒子中|
+|nstatus|商品状态，1未开始，2正常，3已结束|
 
 |我的盒子字段|我的盒子字段描述|
 |---|---|

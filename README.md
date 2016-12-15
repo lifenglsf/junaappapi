@@ -67,7 +67,7 @@
 |---|---|
 |id|订单id|
 |nid|商品id|
-|product_type|商品类型  product：一购商品，share_product：享什么商品|
+|product_type|商品类型 |
 |created|订单创建时间|
 |uid|购买或申领用户id|
 |amount|商品数量|
@@ -77,6 +77,8 @@
 |status|订单状态|
 |express_id|物流编号|
 |payment_type|付款方式|
+|title|商品名称|
+|uri|商品图片|
 
 |我的摇享字段|我的摇享字段描述|
 |---|---|

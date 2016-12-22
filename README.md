@@ -24,6 +24,7 @@
 | 摇享中奖列表    | http://api.junashare.com/juna/prizelist.json | pdate摇享期号，非必填。格式2016-2-3 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|403,406,200|
 | 摇享商品详情    | http://api.junashare.com/juna/swingsharedetail.json | 无 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 忘记密码    | http://api.junashare.com/juna/junausers/forgot_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 修改密码    | http://api.junashare.com/juna/junausers/change_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 |http 状态码|信息|
 |----------|---|
@@ -98,4 +99,4 @@
 |data.participatenum|参与人数|
 |data.field_pictures.und.0.uri|商品图片地址|
 |remaintime|到结束时间剩余秒数，-1为未开始，-2为已结束|
-
+|isparticipate|本次摇享参与次数，0为未参与，其他为参与|

@@ -100,3 +100,5 @@
 |data.field_pictures.und.0.uri|商品图片地址|
 |remaintime|到结束时间剩余秒数，-1为未开始，-2为已结束|
 |isparticipate|本次摇享参与次数，0为未参与，其他为参与|
+
+中奖页面url:http://api.junashare.com/luckdraw/result/date  date格式为20161212

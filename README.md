@@ -76,7 +76,7 @@
 |price|商品单价|
 |total_price|订单金额|
 |alipay_order_id|支付宝订单号|
-|status|订单状态|
+|status|订单状态,0为待付款，2为待发货，3为待收货，5为交易完成，6为已取消，7为待评价|
 |express_id|物流编号|
 |payment_type|付款方式|
 |title|商品名称|

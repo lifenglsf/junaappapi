@@ -25,6 +25,7 @@
 | 摇享商品详情    | http://api.junashare.com/juna/swingsharedetail.json | 无 |get|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 忘记密码    | http://api.junashare.com/juna/junausers/forgot_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 | 修改密码    | http://api.junashare.com/juna/junausers/change_password.json | name:手机号，pass:密码，code:验证码 |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
+| 获取用户认证信息    | http://api.junashare.com/juna/junausers/userinfo.json | uid:用户id |post|cookie:sessioname=sessionvalue,sessioname和sessionvalue都来自于login接口的返回值，X-CSRF-Token:XXX，token的值来自于 http://api.junashare.com/services/session/token|200|
 
 |http 状态码|信息|
 |----------|---|

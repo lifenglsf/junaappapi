@@ -102,4 +102,4 @@
 |remaintime|到结束时间剩余秒数，-1为未开始，-2为已结束|
 |isparticipate|本次摇享参与次数，0为未参与，其他为参与|
 
-中奖页面url:http://api.junashare.com/luckdraw/result/nid  摇享商品id
+中奖页面url:http://api.junashare.com/luckdraw/result/nid  nid用摇享商品id替换

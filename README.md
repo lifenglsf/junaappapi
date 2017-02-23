@@ -51,11 +51,23 @@
 |field_image_for_box.und.0.uri|一购商品盒子列表图片|
 |isinbox|是否在盒子中1代表已经在盒子中|
 |nstatus|商品状态，1未开始，2正常，3已结束|
-
+|links|商品相关连接|links.0.title是连接标题，links.0.url为连接地址，可以有多个链接|
 |我的盒子字段|我的盒子字段描述|
 |---|---|
 |nid|商品id|
 |product_type|商品类型  product：一购商品，share_product：享什么商品|
+|inbox_num|加入盒子数量|
+|remain_num|剩余数量|
+|field_image_for_box.und.0.uri|一购商品盒子图片|
+|field_image_for_list.und.0.uri|享什么商品盒子图片|
+|remain_boxproduct_num|还可放入盒子的商品数量|
+|types|商品类型,如白领商品|
+|field_price.und.0.value|商品价格|
+|created|加入盒子时间|
+|商家字段|商家字段描述|
+|---|---|
+|intro|描述|
+|company_log|logo|
 |inbox_num|加入盒子数量|
 |remain_num|剩余数量|
 |field_image_for_box.und.0.uri|一购商品盒子图片|
